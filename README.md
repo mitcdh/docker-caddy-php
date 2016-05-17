@@ -1,21 +1,15 @@
-# Docker Caddy Server
+# Docker Caddy Server + PHP-FPM
 
 Docker base image for a Caddy web server running on [AlpineLinux](http://alpinelinux.org).
 
-Includes the git feature and runs as the `web-srv` user.
+Includes the git feature and runs as the `web-srv` user. 
+
+Installs php-fpm with a config intended to be invoked from a Caddyfile `startup` command.
 
 ### Usage
-#### Base web server
 ````bash
-docker pull mitcdh/caddy
+docker pull mitcdh/caddy-php
 ````
-
-#### With PHP-FPM
-````bash
-docker pull mitcdh/caddy:php
-````
-
-Includes a php-fpm config intended to be run as web-srv from a Caddyfile `startup` directive.
 
 ### Structure
 * `/www`: Web root

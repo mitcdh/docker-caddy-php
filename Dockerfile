@@ -1,26 +1,22 @@
-FROM alpine:edge
+FROM mitcdh/caddy
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
-ENV CADDY_FEATURES=git
+# elevate to root
+USER root
 
-# install caddy
+# install php
 RUN apk --update add \
-	curl \
-	openssh-client \
-	git \
-	tar \
-	ca-certificates \
- && curl --silent --show-error --fail --location \
-      --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/download/build?os=linux&arch=amd64&features=${CADDY_FEATURES}" \
-    | tar --no-same-owner -C /usr/bin/ -xz caddy \
- && chmod 0755 /usr/bin/caddy \
- && /usr/bin/caddy -version \
+	php5-fpm \
+	php5-curl \
+	php5-json \
+	php5-xml \
+	php5-phar \
+	php5-intl \
+	php5-dom \
+	php5-openssl \
  && rm -rf /var/cache/apk/*
 
-# add user and group
-RUN addgroup -S www-data && \
- adduser -S -G www-data -g "Web Server" -h "/www" web-srv
+ADD files/php-fpm.conf /etc/php5/php-fpm.conf
 
 EXPOSE 2015
 VOLUME /www
