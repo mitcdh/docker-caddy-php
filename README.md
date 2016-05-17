@@ -15,7 +15,7 @@ docker pull mitcdh/caddy
 docker pull mitcdh/caddy:php
 ````
 
-Includes a php-fpm intended to be run as web-srv from a Caddyfile `startup` directive.
+Includes a php-fpm config intended to be run as web-srv from a Caddyfile `startup` directive.
 
 ### Structure
 * `/www`: Web root
