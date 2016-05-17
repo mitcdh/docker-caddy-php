@@ -4,7 +4,12 @@ MAINTAINER Mitchell Hewes <me@mitcdh.com>
 ENV CADDY_FEATURES=git
 
 # install caddy
-RUN apk add --update curl openssh-client git tar \
+RUN apk --update add \
+	curl \
+	openssh-client \
+	git \
+	tar \
+	ca-certificates \
  && curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
       "https://caddyserver.com/download/build?os=linux&arch=amd64&features=${CADDY_FEATURES}" \
