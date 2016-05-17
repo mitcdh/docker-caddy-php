@@ -10,6 +10,7 @@ RUN apk --update add \
 	git \
 	tar \
 	ca-certificates \
+	libcap \
  && curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
       "https://caddyserver.com/download/build?os=linux&arch=amd64&features=${CADDY_FEATURES}" \
