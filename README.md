@@ -1,9 +1,5 @@
 # Docker Caddy Server + PHP-FPM
 
-Docker base image for a Caddy web server running on [AlpineLinux](http://alpinelinux.org).
-
-Includes the git feature and runs as the `web-srv` user. 
-
 Installs php-fpm with a config intended to be invoked from a Caddyfile `startup` command.
 
 ### Usage

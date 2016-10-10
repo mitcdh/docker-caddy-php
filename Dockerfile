@@ -1,9 +1,6 @@
 FROM mitcdh/caddy
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
-# elevate to root
-USER root
-
 # install php
 RUN apk --update add \
 	php5-fpm \
@@ -22,5 +19,4 @@ EXPOSE 2015
 VOLUME /www
 WORKDIR /www
 
-USER web-srv
 CMD ["/usr/bin/caddy"]
