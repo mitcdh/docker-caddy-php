@@ -14,9 +14,3 @@ RUN apk --update add \
  && rm -rf /var/cache/apk/*
 
 ADD files/php-fpm.conf /etc/php5/php-fpm.conf
-
-EXPOSE 2015
-VOLUME /www
-WORKDIR /www
-
-CMD ["/usr/bin/caddy"]
