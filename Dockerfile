@@ -2,7 +2,8 @@ FROM mitcdh/caddy:edge
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 # install php
-RUN apk --update add \
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
+ && apk --update add \
 	php7-apcu \
 	php7-bcmath \
 	php7-ctype \
