@@ -3,25 +3,25 @@ MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 # install php
 RUN apk --update add \
-	php5-apcu \
-	php5-bcmath \
-	php5-ctype \
-	php5-curl \
-	php5-dom \
-	php5-fpm \
-	php5-gd \
-	php5-iconv \
-	php5-intl \
-	php5-json \
-	php5-opcache \
-	php5-openssl \
-	php5-pdo \
-	php5-pdo_sqlite \
-	php5-phar \
-	php5-sqlite3 \
-	php5-xml \
-	php5-xmlreader \
-	php5-zlib \
+	php7-apcu \
+	php7-bcmath \
+	php7-ctype \
+	php7-curl \
+	php7-dom \
+	php7-fpm \
+	php7-gd \
+	php7-iconv \
+	php7-intl \
+	php7-json \
+	php7-opcache \
+	php7-openssl \
+	php7-pdo \
+	php7-pdo_sqlite \
+	php7-phar \
+	php7-sqlite3 \
+	php7-xml \
+	php7-xmlreader \
+	php7-zlib \
  && rm -rf /var/cache/apk/* \
  && { \
  		echo 'opcache.memory_consumption=128'; \
@@ -30,6 +30,6 @@ RUN apk --update add \
  		echo 'opcache.revalidate_freq=2'; \
  		echo 'opcache.fast_shutdown=1'; \
  		echo 'opcache.enable_cli=1'; \
- 	} > /etc/php5/conf.d/opcache-recommended.ini
+ 	} > /etc/php7/conf.d/opcache-recommended.ini
 
-ADD files/php-fpm.conf /etc/php5/php-fpm.conf
+ADD files/php-fpm.conf /etc/php7/php-fpm.conf
