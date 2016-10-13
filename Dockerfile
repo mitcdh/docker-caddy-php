@@ -1,4 +1,4 @@
-FROM mitcdh/caddy
+FROM mitcdh/caddy:edge
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 # install php
