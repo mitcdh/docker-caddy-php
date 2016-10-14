@@ -33,7 +33,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
  		echo 'opcache.enable_cli=1'; \
  	} > /etc/php7/conf.d/opcache-recommended.ini \
  && ln -s /etc/php-fpm7 /etc/php-fpm \
- && ln -s /usr/bin/php-fpm7 /usr/bin/php-fpm \
+ && ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm \
  && ln -s /usr/bin/php7 /usr/bin/php
 
 ADD files/php-fpm.conf /etc/php7/php-fpm.conf
