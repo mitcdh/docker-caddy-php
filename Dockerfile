@@ -14,6 +14,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 	php7-iconv \
 	php7-intl \
 	php7-json \
+        php7-mbstring \
 	php7-opcache \
 	php7-openssl \
 	php7-pdo \
