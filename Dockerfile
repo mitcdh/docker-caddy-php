@@ -14,7 +14,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 	php7-iconv \
 	php7-intl \
 	php7-json \
-        php7-mbstring \
+	php7-mbstring \
 	php7-opcache \
 	php7-openssl \
 	php7-pdo \
@@ -31,7 +31,6 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
  		echo 'opcache.max_accelerated_files=4000'; \
  		echo 'opcache.revalidate_freq=2'; \
  		echo 'opcache.fast_shutdown=1'; \
- 		echo 'opcache.enable_cli=1'; \
  	} > /etc/php7/conf.d/opcache-recommended.ini \
  && ln -s /etc/php-fpm7 /etc/php-fpm \
  && ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm \
