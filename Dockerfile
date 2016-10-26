@@ -20,6 +20,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 	php7-pdo \
 	php7-pdo_sqlite \
 	php7-phar \
+	php7-session \
 	php7-sqlite3 \
 	php7-xml \
 	php7-xmlreader \
