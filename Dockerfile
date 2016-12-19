@@ -2,8 +2,7 @@ FROM mitcdh/caddy:edge
 MAINTAINER Mitchell Hewes <me@mitcdh.com>
 
 # install php
-RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories \
- && apk --update add \
+RUN apk --update add \
 	php7-apcu \
 	php7-bcmath \
 	php7-ctype \
@@ -25,6 +24,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
 	php7-xml \
 	php7-xmlreader \
 	php7-zlib \
+	php7-zip \
  && rm -rf /var/cache/apk/* \
  && { \
  		echo 'opcache.memory_consumption=128'; \
