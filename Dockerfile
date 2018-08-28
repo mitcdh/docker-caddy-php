@@ -34,7 +34,6 @@ RUN apk --update add \
  		echo 'opcache.fast_shutdown=1'; \
  	} > /etc/php7/conf.d/opcache-recommended.ini \
  && ln -s /etc/php-fpm7 /etc/php-fpm \
- && ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm \
- && ln -s /usr/bin/php7 /usr/bin/php
+ && ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm
 
 ADD files/php-fpm.conf /etc/php7/php-fpm.conf
