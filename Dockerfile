@@ -20,9 +20,12 @@ RUN apk --update add \
 	php7-pdo_sqlite \
 	php7-phar \
 	php7-session \
+	php7-simplexml \
 	php7-sqlite3 \
+	php7-tokenizer \
 	php7-xml \
 	php7-xmlreader \
+	php7-xmlwriter \
 	php7-zlib \
 	php7-zip \
  && rm -rf /var/cache/apk/* \
